@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} | Ad Library Blog</title>
+    <meta name="description" content="{description}">
+    
+    <!-- Styles will be inherited from main site -->
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            background: var(--white);
+            padding-top: 80px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .blog-header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .blog-meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .blog-content {
+            font-size: 1.1rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 24px;
+        }
+
+        .blog-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 40px 0 20px 0;
+        }
+
+        .blog-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 32px 0 16px 0;
+        }
+
+        .blog-content code {
+            background: #F3F4F6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .blog-content pre {
+            background: #1E293B;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 24px 0;
+        }
+
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .blog-content blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 16px;
+            margin: 24px 0;
+            color: var(--text-muted);
+        }
+
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+
+        .blog-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-link {
+            color: var(--accent);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./" class="back-to-blog">← Back to Blog</a>
+        
+        <header class="blog-header">
+            <h1 class="blog-title">{title}</h1>
+            <div class="blog-meta">Published: {date} • Reading time: {reading_time}</div>
+        </header>
+        
+        <article class="blog-content">
+            {content}
+        </article>
+        
+        <div class="blog-nav">
+            {prev_next_links}
+        </div>
+    </div>
+</body>
+</html>
